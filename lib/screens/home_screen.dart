@@ -25,37 +25,29 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.grey[850],
-        bottomNavigationBar: Theme(
-          data: Theme.of(context).copyWith(
-              canvasColor: Colors.white,
-              primaryColor: Colors.pinkAccent,
-              textTheme: Theme.of(context)
-                  .textTheme
-                  .copyWith(caption: TextStyle(color: Colors.pinkAccent))),
-          child: BottomNavigationBar(
-              currentIndex: _page,
-              onTap: (p) {
-                _pageController.animateToPage(p,
-                    duration: Duration(milliseconds: 500), curve: Curves.ease);
-              },
-              items: [
-                BottomNavigationBarItem(
-                    icon: Icon(Icons.near_me, color: Colors.pinkAccent),
-                    title: Text('DESTAQUES', style: TextStyle(color: Colors.pinkAccent))),
-                BottomNavigationBarItem(
-                    icon: Icon(Icons.local_hotel, color: Colors.pinkAccent),
-                    title: Text("HOTEIS", style: TextStyle(color: Colors.pinkAccent))),
-                BottomNavigationBarItem(
-                    icon: Icon(Icons.card_travel, color: Colors.pinkAccent),
-                    title: Text("PACOTES", style: TextStyle(color: Colors.pinkAccent))),
-                BottomNavigationBarItem(
-                    icon: Icon(Icons.face, color: Colors.pinkAccent),
-                    title: Text("PERFIL", style: TextStyle(color: Colors.pinkAccent))),
-                BottomNavigationBarItem(
-                    icon: Icon(Icons.more_horiz, color: Colors.pinkAccent),
-                    title: Text("MAIS", style: TextStyle(color: Colors.pinkAccent)))
-              ]),
+        backgroundColor: Colors.blueAccent,
+        bottomNavigationBar: BottomNavigationBar(
+          currentIndex: _page,
+          selectedItemColor: Colors.pinkAccent,
+          showUnselectedLabels: true,
+          unselectedItemColor: Colors.grey,
+          unselectedFontSize: 11.0,
+          onTap: (p) {
+            _pageController.animateToPage(p,
+                duration: Duration(milliseconds: 500), curve: Curves.ease);
+          },
+          items: [
+            BottomNavigationBarItem(
+                icon: Icon(Icons.near_me), title: Text('DESTAQUES')),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.local_hotel), title: Text('HOTEIS')),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.card_travel), title: Text('PACOTES')),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.face), title: Text('PERFIL')),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.more_horiz), title: Text('MAIS'))
+          ],
         ),
         body: SafeArea(
           child: PageView(
