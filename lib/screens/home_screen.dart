@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hurb/screens/profile_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -67,9 +68,7 @@ class _HomeScreenState extends State<HomeScreen> {
               Container(
                 color: Colors.yellow,
               ),
-              Container(
-                color: Colors.brown,
-              ),
+              ProfileScreen(),
               Container(
                 color: Colors.purple,
               )
