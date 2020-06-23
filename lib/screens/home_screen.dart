@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hurb/screens/explorer_screen.dart';
+import 'package:hurb/screens/hotel_screen.dart';
+import 'package:hurb/screens/more_options_screen.dart';
 import 'package:hurb/screens/profile_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -59,19 +62,13 @@ class _HomeScreenState extends State<HomeScreen> {
               });
             },
             children: <Widget>[
-              Container(
-                color: Colors.blue,
-              ),
-              Container(
-                color: Colors.green,
-              ),
+              ExplorerScreen(),
+              HotelScreen(),
               Container(
                 color: Colors.yellow,
               ),
               ProfileScreen(),
-              Container(
-                color: Colors.purple,
-              )
+              MoreOptionsScreen()
             ],
           ),
         ));
