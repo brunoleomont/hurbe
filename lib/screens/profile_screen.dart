@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hurb/widgets/list_perfil_menu_item.dart';
+import 'package:hurb/widgets/list_menu_item.dart';
 
 class ProfileScreen extends StatelessWidget {
   @override
@@ -40,12 +40,12 @@ class ProfileScreen extends StatelessWidget {
                       ],
                     ),
                     SizedBox(height: 15.0),
-                    ListPerfilMenuItem("Viagens", Icons.card_travel),
-                    ListPerfilMenuItem("Créditos", Icons.card_giftcard),
-                    ListPerfilMenuItem("Favoritos", Icons.favorite_border),
-                    ListPerfilMenuItem("Últimos Vistos", Icons.remove_red_eye),
-                    ListPerfilMenuItem("Informações pessoais", Icons.account_box),
-                    ListPerfilMenuItem("Sair", Icons.exit_to_app)
+                    ListMenuItem("Viagens", Icons.card_travel),
+                    ListMenuItem("Créditos", Icons.card_giftcard),
+                    ListMenuItem("Favoritos", Icons.favorite_border),
+                    ListMenuItem("Últimos Vistos", Icons.remove_red_eye),
+                    ListMenuItem("Informações pessoais", Icons.account_box),
+                    ListMenuItem("Sair", Icons.exit_to_app)
                   ],
                 ))
           ],
